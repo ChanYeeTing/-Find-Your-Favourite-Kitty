@@ -17,7 +17,7 @@
     "react-tinder-swipe": "^1.0.3",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://[your-github-username].github.io/[your-repo-name]",
+  "homepage": "https://chanyeeting.github.io/-Find-Your-Favourite-Kitty/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
