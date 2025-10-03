@@ -1,0 +1,180 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f3f4f6; 
+  padding: 1rem;
+}
+
+.cardStack {
+  position: relative;
+  width: 100%;
+  max-width: 22rem; 
+  height: 70vh;
+}
+
+.swipeCard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out; 
+}
+
+.cardImg {
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.cardName {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.swipeLabel {
+  position: absolute;
+  top: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 3px solid;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.likeLabel {
+  left: 20px;
+  color: limegreen; 
+  border-color: limegreen;
+  transform: rotate(-10deg);
+}
+
+.nopeLabel {
+  right: 20px;
+  color: crimson; 
+  border-color: #dc2626;
+  transform: rotate(10deg);
+}
+
+.actionButtons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 10;
+}
+
+button{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.btnDislike {
+  background: #fef2f2; 
+  color: #dc2626;
+}
+
+.btnLike {
+  background: #ecfdf5; 
+  color: #16a34a;
+}
+
+.summaryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: #f3f4f6;
+  padding: 2rem 1rem;
+}
+
+.summaryTitle {
+  font-size: 1.8rem; 
+  font-weight: 900; 
+  margin-bottom: 0.25rem; 
+  color: #1f2937; 
+}
+
+.summaryText {
+  margin-bottom: 2.5rem;
+  font-size: 1.3rem; 
+  color: #4b5563; 
+  font-weight: 500;
+}
+
+.summaryGrid {
+  width: 100%;
+  max-width: 25rem; 
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 1.5rem;
+}
+
+.summaryCard {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.summaryCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+}
+
+.summaryImg {
+  width: 100%;
+  height: 14rem; 
+  object-fit: cover;
+}
+
+.summaryName {
+  text-align: center;
+  font-weight: 700; 
+  padding: 0.75rem;
+  color: #1f2937;
+  font-size: 1.25rem; 
+}
+
+@media (max-width: 600px) {
+  .cardStack {
+    height: 65vh; 
+  }
+  .btn {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.75rem;
+  }
+  .summaryTitle {
+    font-size: 1.5rem;
+  }
+  .summaryGrid {
+    gap: 1rem;
+  }
+}
